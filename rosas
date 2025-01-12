@@ -1,0 +1,27 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class FloresAmarillas extends JPanel {
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.setColor(Color.YELLOW); // Color de la flor
+        // Dibujar círculos (flores)
+        g.fillOval(50, 50, 100, 100); // Flor 1
+        g.fillOval(200, 50, 100, 100); // Flor 2
+        g.fillOval(350, 50, 100, 100); // Flor 3
+        g.setColor(Color.GREEN); // Tallo de la flor
+        g.fillRect(95, 150, 10, 100); // Tallo flor 1
+        g.fillRect(245, 150, 10, 100); // Tallo flor 2
+        g.fillRect(395, 150, 10, 100); // Tallo flor 3
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Flores Amarillas");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 400);
+        frame.add(new FloresAmarillas());
+        frame.setVisible(true);
+    }
+}
